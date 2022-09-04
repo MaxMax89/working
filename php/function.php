@@ -187,12 +187,32 @@ $arr = [1, 2, 3, 4, 5];
   }
 
 
+                   // Сделайте функцию cut, которая первым параметром будет принимать строку, а вторым параметром - сколько первых символов оставить в этой строке. Второй параметр должен быть необязательным и по умолчанию принимать значение 10.
+
+function cut($str,$num = 10)
 
 
+//Пример работы функции array_mup 
 
+$array = [16,5,34,88,22,5];
+ var_dump(array_map(function($elem){
+  return $elem = 10;
+ },$array));
 
+                                       //Пример работы функции array_filter
 
+ $array = [100,200,300,400,];
+ $num = 300;                                                 // если не передать callback функцию выведет только те значения которие имеют тип true
+ var_dump(array_filter($array, function($element) use ($num){                 // c помощью use передадим переменную в функцию
+  return $element >= $num;
+ }));
 
+// Пример работы функции array_walk
+
+$array = [100,200,300,400];
+    var_dump(array_walk($array, function($element){
+  echo $element;
+}));
 
 ?>
 
