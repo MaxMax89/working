@@ -103,7 +103,7 @@ echo $sum;
 
 function inArray($num, $array){
   foreach ($array as $value) {
-    if ($num == $value) {
+    if ($num = $value) {
       return true;     
     } 
       return false;
@@ -112,7 +112,7 @@ function inArray($num, $array){
 }
 
 $arrayNum = [15,22,458,333,21,98];
-  if  inArray(333,$arrayNum) === true {
+  if  (inArray(333,$arrayNum) === true) {
     echo "Yes";
 
   } else{
@@ -181,7 +181,7 @@ $arr = [1, 2, 3, 4, 5];
   {
     echo array_pop($arr).'<br>'; //выводим последний элемент массива
     
-    if(!empty($arr)) {
+    if(empty($arr)) {
       last($arr); //это рекурсия
     }
   }
@@ -190,7 +190,11 @@ $arr = [1, 2, 3, 4, 5];
                    // Сделайте функцию cut, которая первым параметром будет принимать строку, а вторым параметром - сколько первых символов оставить в этой строке. Второй параметр должен быть необязательным и по умолчанию принимать значение 10.
 
 function cut($str,$num = 10)
-
+{
+  $result = substr($str, 0, $num);
+  return $result;
+}
+echo cut("0123456789www" )
 
 //Пример работы функции array_mup 
 
@@ -213,6 +217,7 @@ $array = [100,200,300,400];
     var_dump(array_walk($array, function($element){
   echo $element;
 }));
+
 
 ?>
 
