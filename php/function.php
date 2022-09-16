@@ -200,7 +200,7 @@ echo cut("0123456789www" )
 
 $array = [16,5,34,88,22,5];
  var_dump(array_map(function($elem){
-  return $elem = 10;
+  return $elem + 10;
  },$array));
 
                                        //Пример работы функции array_filter
