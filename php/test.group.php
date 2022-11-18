@@ -58,10 +58,6 @@ foreach ($workers as $key => $value) {
     $workersgroup[$value["note"]["position_code"]][] = $value;
 }
 
-//-------------------sort for solary in group-----------
-
-
-
 
 
 
